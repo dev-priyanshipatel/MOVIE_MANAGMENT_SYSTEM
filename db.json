@@ -1,0 +1,94 @@
+{
+  "movies": [
+    {
+      "id": "1",
+      "title": "Inception",
+      "description": "A skilled thief enters dreams to steal secrets and plant ideas, blurring the line between reality and imagination.",
+      "genre": "Sci-Fi",
+      "rating": 8.8,
+      "language": "English",
+      "image": "/images/inception.jpg"
+    },
+    {
+      "id": "2",
+      "title": "Interstellar",
+      "description": "A group of explorers travel through a wormhole in space in an attempt to save humanity.",
+      "genre": "Sci-Fi",
+      "rating": 8.6,
+      "language": "English",
+      "image": "/images/interstellar.webp"
+    },
+    {
+      "id": "3",
+      "title": "The Dark Knight",
+      "description": "Batman faces the Joker, a criminal mastermind who wants to plunge Gotham City into chaos.",
+      "genre": "Action",
+      "rating": 9,
+      "language": "English",
+      "image": "/images/thedarknight.jpg"
+    },
+    {
+      "id": "4",
+      "title": "Avengers: Endgame",
+      "description": "The Avengers assemble once more to reverse the damage caused by Thanos.",
+      "genre": "Superhero",
+      "rating": 8.4,
+      "language": "English",
+      "image": "/images/avengers-endgame.jpg"
+    },
+    {
+      "id": "5",
+      "title": "Parasite",
+      "description": "A poor family schemes to become employed by a wealthy household, leading to unexpected consequences.",
+      "genre": "Thriller",
+      "rating": 8.5,
+      "language": "Korean",
+      "image": "/images/parasite.webp"
+    },
+    {
+      "id": "6",
+      "title": "3 Idiots",
+      "description": "Three engineering students navigate friendship, pressure, and the true meaning of success.",
+      "genre": "Comedy / Drama",
+      "rating": 8.4,
+      "language": "Hindi",
+      "image": "/images/3-idiots.webp"
+    },
+    {
+      "id": "7",
+      "title": "Joker",
+      "description": "A mentally troubled comedian embarks on a downward spiral that leads to chaos in Gotham City.",
+      "genre": "Drama",
+      "rating": 8.5,
+      "language": "English",
+      "image": "/images/joker.jpg"
+    },
+    {
+      "id": "8",
+      "title": "RRR",
+      "description": "A fictional story about two legendary revolutionaries and their journey before fighting for their country.",
+      "genre": "Action / Drama",
+      "rating": 8,
+      "language": "Telugu",
+      "image": "/images/rrr.jpg"
+    },
+    {
+      "id": "9",
+      "title": "Spirited-Away",
+      "description": "A young girl enters a magical world ruled by gods, spirits, and strange creatures.",
+      "genre": "Animation / Fantasy",
+      "rating": 8.6,
+      "language": "Japanese",
+      "image": "/images/spirited-away.jpg"
+    }
+  ],
+  "users": [
+    {
+      "id": "b708",
+      "name": "john",
+      "email": "john@gmail.com",
+      "password": "123456",
+      "confirmPassword": "123456"
+    }
+  ]
+}
