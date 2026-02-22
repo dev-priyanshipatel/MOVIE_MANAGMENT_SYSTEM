@@ -1,10 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import MovieCard from "./MovieCard";
 
 const MainBanner = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center">
-      {/* Background Image */}
+      
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
@@ -13,10 +14,10 @@ const MainBanner = () => {
         }}
       />
 
-      {/* Dark Overlay */}
+      
       <div className="absolute inset-0 bg-slate-900/70" />
 
-      {/* Glass Card */}
+      
       <div className="relative z-10 max-w-5xl mx-auto px-6">
         <div className="bg-slate-800/60 backdrop-blur-xl border border-slate-700 rounded-2xl p-8 md:p-14 text-center">
           <p className="text-blue-400 uppercase tracking-widest text-sm">
@@ -34,7 +35,7 @@ const MainBanner = () => {
             CSS, and JSON Server. Built for performance and simplicity.
           </p>
 
-          {/* Buttons */}
+          
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/dashboard"
@@ -53,6 +54,7 @@ const MainBanner = () => {
         </div>
       </div>
     </section>
+    
   );
 };
 

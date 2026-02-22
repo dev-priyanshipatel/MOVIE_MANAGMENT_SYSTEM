@@ -7,6 +7,7 @@ import Header from './components/Header'
 import { Toaster } from 'react-hot-toast'
 import Movies from './pages/Movies'
 import AddMovie from './pages/AddMovie'
+import EditMovie from './pages/EditMovie'
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
           <Route path="/signup" element={<SignUP />} />
           <Route path="/movies" element={<Movies />} />
           <Route path='/add-movie' element={<AddMovie />} />
+          <Route path='/edit-movie/:id' element={<EditMovie />} />
         </Routes>
       </BrowserRouter>
     </div>

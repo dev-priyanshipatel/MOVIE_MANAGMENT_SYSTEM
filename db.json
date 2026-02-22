@@ -37,15 +37,6 @@
       "image": "/images/avengers-endgame.jpg"
     },
     {
-      "id": "5",
-      "title": "Parasite",
-      "description": "A poor family schemes to become employed by a wealthy household, leading to unexpected consequences.",
-      "genre": "Thriller",
-      "rating": 8.5,
-      "language": "Korean",
-      "image": "/images/parasite.webp"
-    },
-    {
       "id": "6",
       "title": "3 Idiots",
       "description": "Three engineering students navigate friendship, pressure, and the true meaning of success.",
@@ -68,7 +59,7 @@
       "title": "RRR",
       "description": "A fictional story about two legendary revolutionaries and their journey before fighting for their country.",
       "genre": "Action / Drama",
-      "rating": 8,
+      "rating": 8.2,
       "language": "Telugu",
       "image": "/images/rrr.jpg"
     },

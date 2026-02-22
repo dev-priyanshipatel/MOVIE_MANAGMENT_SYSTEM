@@ -4,21 +4,22 @@ import { BASE_API_URL } from "../api/api";
 import toast from "react-hot-toast";
 import MovieCard from "../components/MovieCard";
 import { Link } from "react-router-dom";
+import MovieCardWithActions from "../components/MovieCardWithActions";
 
 const Movies = () => {
   const [movies, setMovies] = useState([]);
 
+   const fetchMovies = async () => {
+     try {
+       const { data } = await axios.get(`${BASE_API_URL}/movies`);
+       setMovies(data);
+     } catch (err) {
+       toast.error("Something Went Wrong. Please try again later.");
+     }
+   };
   useEffect(() => {
-    const fetchMovies = async () => {
-      try {
-        const { data } = await axios.get(`${BASE_API_URL}/movies`);
-        setMovies(data);
-      } catch (err) {
-        toast.error("Something Went Wrong. Please try again later.")
-      }
-    };
     fetchMovies(); 
-  }, []);
+  }, [movies]);
   return (
     <section className="bg-slate-900 min-h-screen pt-24 px-6">
       <div className="max-w-7xl mx-auto">
@@ -32,7 +33,7 @@ const Movies = () => {
         </div>
         <div className="flex flex-wrap -m-4">
           {movies.map((movie) => {
-            return <MovieCard key={movie.id} movie={movie} />;
+            return <MovieCardWithActions key={movie.id} movie={movie} fetchMovies={fetchMovies} />;
           })}
         </div>
       </div>
