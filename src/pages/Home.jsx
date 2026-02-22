@@ -21,7 +21,7 @@ const Home = () => {
 
   useEffect(() => {
     fetchMovies();
-  }, [movies]);
+  }, []);
   return (
     <div>
       <MainBanner />

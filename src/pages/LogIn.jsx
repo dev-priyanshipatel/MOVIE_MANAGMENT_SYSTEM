@@ -59,7 +59,7 @@ const LogIn = () => {
 
       <div className="absolute inset-0 bg-slate-900/70" />
 
-      <div className="relative z-10 w-full max-w-md px-6">
+      <div className="relative z-0 w-full max-w-md px-6">
         <div className="bg-slate-800/60 backdrop-blur-xl border border-slate-700 rounded-2xl p-8">
           <h2 className="text-3xl font-bold text-white text-center">
             Welcome Back

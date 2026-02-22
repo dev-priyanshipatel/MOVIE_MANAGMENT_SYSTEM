@@ -1,8 +1,16 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
+
+  const isLoggedIn = localStorage.getItem("userId");
+
+  const handleLogout = () => {
+    localStorage.removeItem("userId");
+    navigate("/login")
+  };
 
   return (
     <header className="bg-slate-900 fixed top-0 w-full z-10">
@@ -17,9 +25,7 @@ const Header = () => {
           <Link className="text-slate-300 hover:text-blue-400" to="/">
             Home
           </Link>
-          <Link className="text-slate-300 hover:text-blue-400" to="/dashboard">
-            Dashboard
-          </Link>
+
           <Link className="text-slate-300 hover:text-blue-400" to="/movies">
             Movies
           </Link>
@@ -27,18 +33,30 @@ const Header = () => {
 
         {/* Auth Buttons (Desktop) */}
         <div className="hidden md:flex gap-3">
-          <Link
-            to="/login"
-            className="px-4 py-2 border border-blue-400 text-blue-400 rounded-md hover:bg-blue-400 hover:text-slate-900 transition"
-          >
-            Login
-          </Link>
-          <Link
-            to="/signup"
-            className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition"
-          >
-            Signup
-          </Link>
+          {isLoggedIn ? (
+            <button
+              className="px-4 py-2 border border-blue-400 text-blue-400 rounded-md
+          hover:bg-blue-400 hover:text-slate-900 transition"
+              onClick={handleLogout}
+            >
+              Logout
+            </button>
+          ) : (
+            <>
+              <Link
+                to="/login"
+                className="px-4 py-2 border border-blue-400 text-blue-400 rounded-md hover:bg-blue-400 hover:text-slate-900 transition"
+              >
+                Login
+              </Link>
+              <Link
+                to="/signup"
+                className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition"
+              >
+                Signup
+              </Link>
+            </>
+          )}
         </div>
 
         {/* Hamburger Button (Mobile) */}
@@ -76,18 +94,35 @@ const Header = () => {
           </Link>
 
           <div className="flex gap-3 pt-4">
-            <Link
-              to="/login"
-              className="w-full text-center px-4 py-2 border border-blue-400 text-blue-400 rounded-md"
-            >
-              Login
-            </Link>
-            <Link
-              to="/signup"
-              className="w-full text-center px-4 py-2 bg-blue-500 text-white rounded-md"
-            >
-              Signup
-            </Link>
+            {isLoggedIn ? (
+              <button
+                onClick={() => {
+                  handleLogout();
+                  setOpen(false);
+                }}
+                className="w-full text-center px-4 py-2 border border-blue-400 text-blue-400 rounded-md"
+              >
+                Logout
+              </button>
+            ) : (
+              <>
+                <Link
+                  to="/login"
+                  onClick={() => setOpen(false)}
+                  className="w-full text-center px-4 py-2 border border-blue-400 text-blue-400 rounded-md"
+                >
+                  Login
+                </Link>
+
+                <Link
+                  to="/signup"
+                  onClick={() => setOpen(false)}
+                  className="w-full text-center px-4 py-2 bg-blue-500 text-white rounded-md"
+                >
+                  Signup
+                </Link>
+              </>
+            )}
           </div>
         </div>
       )}

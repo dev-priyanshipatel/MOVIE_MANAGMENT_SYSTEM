@@ -8,6 +8,7 @@ import { Toaster } from 'react-hot-toast'
 import Movies from './pages/Movies'
 import AddMovie from './pages/AddMovie'
 import EditMovie from './pages/EditMovie'
+import ProtectedRoutes from './components/ProtectedRoutes'
 
 const App = () => {
   return (
@@ -19,9 +20,9 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<LogIn />} />
           <Route path="/signup" element={<SignUP />} />
-          <Route path="/movies" element={<Movies />} />
-          <Route path='/add-movie' element={<AddMovie />} />
-          <Route path='/edit-movie/:id' element={<EditMovie />} />
+          <Route path="/movies" element={<ProtectedRoutes><Movies/></ProtectedRoutes>} />
+          <Route path='/add-movie' element={<ProtectedRoutes><AddMovie /></ProtectedRoutes>} />
+          <Route path='/edit-movie/:id' element={<ProtectedRoutes><EditMovie /></ProtectedRoutes>} />
         </Routes>
       </BrowserRouter>
     </div>
